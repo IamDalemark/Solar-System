@@ -18,7 +18,7 @@ import saturnRingTexture from '../img/saturn ring.png';
 import uranusTexture from '../img/uranus.jpg';
 import uranusRingTexture from '../img/uranus ring.png';
 import neptuneTexture from '../img/neptune.jpg';
-import plutoTexture from '../img/pluto.jpg';
+
 
 const renderer = new THREE.WebGLRenderer();
 
@@ -130,7 +130,7 @@ const uranus = createPlanete(7, uranusTexture, 176, {
     texture: uranusRingTexture
 });
 const neptune = createPlanete(7, neptuneTexture, 200);
-const pluto = createPlanete(2.8, plutoTexture, 216);
+
 
 const pointLight = new THREE.PointLight(0xFFFFFF, 30000, 3000);
 scene.add(pointLight);
@@ -146,7 +146,6 @@ function animate() {
     saturn.mesh.rotateY(0.038);
     uranus.mesh.rotateY(0.03);
     neptune.mesh.rotateY(0.032);
-    pluto.mesh.rotateY(0.008);
     labelRenderer.render(scene,camera);
 
     //Around-sun-rotation
@@ -158,7 +157,7 @@ function animate() {
     saturn.obj.rotateY(0.0009);
     uranus.obj.rotateY(0.0004);
     neptune.obj.rotateY(0.0001);
-    pluto.obj.rotateY(0.00007);
+
 
     renderer.render(scene, camera);
 }
@@ -224,6 +223,8 @@ document.getElementById('venusButton').addEventListener('click', function(){ // 
     title.append(divText);
 });
 document.getElementById('venusButton').addEventListener('click', function(){ //wieg
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
     divDescription.textContent = "Venus, shrouded in clouds and named after a goddess of love, is frequently referred to as Earth's counterpart. However, upon closer examination, Venus reveals its infernal nature. Positioned as our closest planetary neighbor, it's the second planet from the Sun and possesses a surface so scorching that it could liquefy lead. Ranking as the second planet from the Sun and sixth in size and mass within our solar system."
     description.append(divDescription)
 
@@ -249,6 +250,8 @@ document.getElementById('earthButton').addEventListener('click', function(){ //w
 });
 
 document.getElementById('earthButton').addEventListener('click', function(){ //wieg
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
     divDescription.textContent = "Earth, named uniquely from Old English and Germanic origins, means 'the ground' and is the third planet from the Sun. It's called by diverse names in various languages, serving as our home and the singular known habitat for life in the solar system, distinguished by its possession of surface water."
     description.append(divDescription)
 });
@@ -261,8 +264,10 @@ document.getElementById('marsButton').addEventListener('click', function() {
         onUpdate: () => camera.lookAt(mars.mesh.position)
     });
 document.getElementById('marsButton').addEventListener('click', function(){ //wieg
-        divDescription.textContent = "Mars, a barren, rocky, and frigid world, orbits as the fourth planet from the Sun and stands as one of Earth's adjacent neighbors alongside Venus. Easily visible in the night sky, it appears as a vibrant red dot, earning its moniker, the Red Planet. Throughout history, Mars has been linked to conflict and violence due to its association with warfare and slaughter."
-        description.append(divDescription)
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
+    divDescription.textContent = "Mars, a barren, rocky, and frigid world, orbits as the fourth planet from the Sun and stands as one of Earth's adjacent neighbors alongside Venus. Easily visible in the night sky, it appears as a vibrant red dot, earning its moniker, the Red Planet. Throughout history, Mars has been linked to conflict and violence due to its association with warfare and slaughter."
+    description.append(divDescription)
         
 });
 });
@@ -292,6 +297,8 @@ document.getElementById('jupiterButton').addEventListener('click', function(){ /
 });
 
 document.getElementById('jupiterButton').addEventListener('click', function(){ //wieg
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
     divDescription.textContent = 'Jupiter, positioned as the fifth planet from the Sun, reigns as the largest planet in our solar system, surpassing the combined mass of all other planets twofold. Its distinctive bands and whirling patterns consist of chilly, windy clouds comprising ammonia and water, suspended within an atmosphere primarily composed of hydrogen and helium.'
     description.append(divDescription)
 });
@@ -316,6 +323,8 @@ document.getElementById('saturnButton').addEventListener('click', function(){ //
 });
 
 document.getElementById('saturnButton').addEventListener('click', function(){ //wieg
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
     divDescription.textContent = 'Saturn, the sixth planet from the Sun and second-largest in our system, shares similarities with Jupiter as a massive gas sphere rich in hydrogen and helium. Distinguished by its unparalleled ring system, Saturn possesses a collection of moons, setting it apart from other planets in our solar system.'
     description.append(divDescription)
 });
@@ -333,6 +342,8 @@ document.getElementById('uranusButton').addEventListener('click', function() {
 });
 
 document.getElementById('uranusButton').addEventListener('click', function(){ //wieg
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
     divDescription.textContent = "Neptune, the solar system's third most massive and farthest planet from the Sun, can't be seen without aid due to its extreme distance. Through a small telescope, it appears as a faint, tiny blue-green disk, showcasing its icy, windy, and remote nature, positioned significantly beyond Earth's distance from the Sun. As the sole unobservable planet without visual assistance, Neptune remains over 30 times farther from the Sun than our planet"
     description.append(divDescription)
 });
@@ -356,6 +367,8 @@ document.getElementById('neptuneButton').addEventListener('click', function() {
 });
 
 document.getElementById('neptuneButton').addEventListener('click', function(){ //wieg
+    divDescription.setAttribute('id', 'description')
+    divDescription.setAttribute('class', 'description')
     divDescription.textContent = 'Uranus, an ice giant akin to Neptune, is composed mainly of hot, dense icy substances such as water, methane, and ammonia, surrounding a small rocky core. Its freezing, windy climate hosts faint rings and more than two dozen moons, while its unique nearly 90-degree tilt gives it an appearance of rotating on its side.'
     description.append(divDescription)
 });
