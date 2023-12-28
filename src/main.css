@@ -6,31 +6,109 @@
     margin-top: 100px;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 20px;
+    
+
 }
 
 #buttons button {
     display: block;
     margin-bottom: 10px;
-    padding: 10px;
-    background-color: #ff4d4d; 
+    padding: 10px 30px;
+    background-color: rgba(194, 193, 193, 0.581);
+
     border: none;
-    color: white;
+    color: black;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    text-transform: uppercase;
+    font-size: 15px;
     transition-duration: 0.4s;
     cursor: pointer;
+    letter-spacing: 0.1em;
+    width: 95%;
+    transition: 0.5s;
 }
 
-#buttons button:hover {
-    background-color: #45a049;
+/* #buttons button:hover { */
+    
+#mercuryButton:hover{
+    background: rgb(118, 48, 13)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(118, 48, 13);
 }
 
-/* p{
-    transform: translateX(-10px);
-    color: white;;
-} */
+#venusButton:hover{
+    background: rgb(207, 202, 55)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(207, 202, 55);
+}
+#earthButton:hover{
+    background: rgb(24, 77, 220)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(24, 77, 220);
+}
+
+#marsButton:hover{
+    background: rgb(133, 16, 16)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(133, 16, 16);
+}
+
+#jupiterButton:hover{
+    background: rgb(226, 103, 21)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(226, 103, 21);
+}
+
+#saturnButton:hover{
+    background: rgb(169, 127, 13)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(169, 123, 13);
+}
+
+#uranusButton:hover{
+    background: rgb(42, 44, 70)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(42, 44, 70);
+}
+
+#neptuneButton:hover{
+    background: rgb(17, 18, 34)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgb(17, 18, 34);
+}
+
+#back:hover{
+    background: rgba(255, 255, 255, 0.796)   ;
+    position: relative;
+    letter-spacing: 0.15em;
+    width: 95%;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.642);
+}
+
+#buttons button:before{
+    content: '';
+    position: absolute;
+    background-color: black;
+
+}
 
 
 .buttonss{
@@ -39,10 +117,7 @@
     color: #2a14b9;
 }
 
-#mercuryButton{
-    background-color: yellowgreen;
-    color: red;
-}
+
 
 /* progressbar */
 .progress-bar-container{
@@ -69,38 +144,81 @@ label{
     color: rgb(255, 255, 255);
     font-size: 2rem;
 }
-/* try */
-.three-js-text {
-    position: absolute;
-    z-index: 90;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; 
-  }
-.textMercury{
-    position: absolute;
-    margin-bottom: 0px;
-    color: rgb(39, 8, 152);
-}
 
-.title{
+.title {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
     transition: 2s;
-    
-    margin-left: 44%;
-    margin-top: 10%;
-    position: absolute;
+    letter-spacing: 2px;
+    position: absolute;    
+    top: 17%;            
+    left: 50%;             
+    transform: translate(-50%, -50%); /* Apply transform to offset by half of the element's own width and height */
     color: white;
-    font-size: 25px;
-}
-
+    font-size: 35px;
+  }
 .description{
-    transition-duration: 2s;
+    font-family: monospace;
+    font-size: large;
+    letter-spacing: 1px;
     position: absolute;
     z-index: 100;
-    width: 200px;
-    margin-top: 15%;
-    margin-left: 65%;
+    width: 300px;
+    top: 20%;
+    left: 65%;
     color: white;
     background-color: rgba(0, 0, 0, 0.482);
+}
+
+/* landingPage */
+.landingBody{
+    background-image: url(3bodyBackground.webp);
+    background-size: cover;
+}
+.mainConatainer{
+    height: 100%;
+    width: 100%;
+}
+.mainButton{
+    display: flex;
+    position: absolute;
+    justify-content: center; 
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    border: none;
+    font-size: 6em;
+    font-family: Impact;
+    font-weight: 750;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: black;
+    color:transparent;
+    letter-spacing: 10px;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+}
+
+.mainButton:hover{
+    transition-duration: 2s;
+    background-image: url(13background.gif);
+    color: transparent;
+    font-size: 7em;
+}
+
+.pogis{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    font-size: .5em;
+    letter-spacing: .5px;
+    color: white;
+    gap:50px;
+
 }
